@@ -12,5 +12,11 @@ namespace Adow_sOwnBlog.Models
         /// This file contains category related info
         public int id { get; set; }
         public string name { get; set; }
+
+        public ArticleCategory(int id,string name)
+        {
+            this.id = id;
+            this.name = name;
+        }
     }
 }

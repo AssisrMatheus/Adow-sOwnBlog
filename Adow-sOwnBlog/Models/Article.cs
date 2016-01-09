@@ -18,5 +18,17 @@ namespace Adow_sOwnBlog.Models
         public string tags { get; set; }
         public string featuredImage { get; set; }
         public List<ArticleCategory> categories { get; set; }
+
+        public Article(int id, Author author, string title, string description, string content, string tags, string featuredImage, List<ArticleCategory> categories)
+        {
+            this.id = id;
+            this.author = author;
+            this.title = title;
+            this.description = description;
+            this.content = content;
+            this.tags = tags;
+            this.featuredImage = featuredImage;
+            this.categories = categories;
+        }
     }
 }
