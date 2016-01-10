@@ -13,11 +13,11 @@
         @foreach (Adow_sOwnBlog.Models.Article article in Model)
         {
             <article class="list-group-item">
-                <h4 class="list-group-item-heading">@Html.ActionLink(@article.title, "mostraNoticia", "Home", new { @id = article.id, @title = article.title, @category = article.categories[0] }, null)</h4>
+                <h4 class="list-group-item-heading">@Html.ActionLink(@article.title, "showArticle", "Home", new { @category = article.categories[0].name, @title = article.title, @id = article.id }, null)</h4>
                 <aside class="categories">
                     @foreach (Adow_sOwnBlog.Models.ArticleCategory category in article.categories)
                     {
-                        <span class="label label-default">@Html.ActionLink(category.name, "mostraCategoria", "Home", new { @cat = category }, null)</span>
+                        <span class="label label-default">@Html.ActionLink(category.name, "showCategory", "Home", new { @category = category.name }, null)</span>
                     }
                 </aside>
                 <section class="list-group-item-text">

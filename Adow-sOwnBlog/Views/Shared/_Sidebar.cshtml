@@ -9,7 +9,7 @@
     <ul class="list-group">
         @foreach (Adow_sOwnBlog.Models.ArticleCategory category in Model)
         {
-            <li class="list-group-item">@Html.ActionLink(category.name, "showCategory", "Home", new { @id = category.id })</li>
+            <li class="list-group-item">@Html.ActionLink(category.name, "showCategory", "Home", new { @category = category.name }, null)</li>
         }
     </ul>
 
