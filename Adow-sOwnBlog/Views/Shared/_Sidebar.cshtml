@@ -1,8 +1,16 @@
-﻿<div class="panel panel-default">
+﻿@model List<Adow_sOwnBlog.Models.ArticleCategory>
+
+<div class="panel panel-default">
     <div class="panel-heading">
-        <h3 class="panel-title">Panel title</h3>
+        <h3 class="panel-title">
+            Categories
+        </h3>
     </div>
-    <div class="panel-body">
-        Panel content
-    </div>
+    <ul class="list-group">
+        @foreach (Adow_sOwnBlog.Models.ArticleCategory category in Model)
+        {
+            <li class="list-group-item">@Html.ActionLink(category.name, "showCategory", "Home", new { @id = category.id })</li>
+        }
+    </ul>
+
 </div>
