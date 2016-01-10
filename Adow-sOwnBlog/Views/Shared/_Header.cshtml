@@ -1,3 +1,19 @@
-﻿<nav>
+﻿<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+                @ViewBag.Title
+            </a>
+        </div>
 
+        <ul class="nav navbar-nav">
+            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+            <li>@Html.ActionLink("Categories", "viewAllCategories", "Home")</li>
+            <li>@Html.ActionLink("Post Article", "Index", "PostArticle")</li>
+        </ul>
+    </div>
 </nav>
+
+<header>
+
+</header>
